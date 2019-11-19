@@ -1,0 +1,305 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VpcStack 1`] = `Object {}`;
+
+exports[`VpcStack 2`] = `
+Object {
+  "Resources": Object {
+    "privateSubnetapnortheast1aDefaultRoute3AC536A6": Object {
+      "Properties": Object {
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "NatGatewayId": "nat-99999999999999999",
+        "RouteTableId": Object {
+          "Ref": "privateSubnetapnortheast1aRouteTable69CBA704",
+        },
+      },
+      "Type": "AWS::EC2::Route",
+    },
+    "privateSubnetapnortheast1aRouteTable69CBA704": Object {
+      "Properties": Object {
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "MyTestStack/privateSubnet-ap-northeast-1a",
+          },
+        ],
+        "VpcId": "vpc-99999999",
+      },
+      "Type": "AWS::EC2::RouteTable",
+    },
+    "privateSubnetapnortheast1aRouteTableAssociationFE5AA7E4": Object {
+      "Properties": Object {
+        "RouteTableId": Object {
+          "Ref": "privateSubnetapnortheast1aRouteTable69CBA704",
+        },
+        "SubnetId": Object {
+          "Ref": "privateSubnetapnortheast1aSubnetD7D78EEF",
+        },
+      },
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+    },
+    "privateSubnetapnortheast1aSubnetD7D78EEF": Object {
+      "Properties": Object {
+        "AvailabilityZone": "ap-northeast-1a",
+        "CidrBlock": "172.31.51.0/24",
+        "MapPublicIpOnLaunch": true,
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "MyTestStack/privateSubnet-ap-northeast-1a",
+          },
+        ],
+        "VpcId": "vpc-99999999",
+      },
+      "Type": "AWS::EC2::Subnet",
+    },
+    "privateSubnetapnortheast1cDefaultRouteAEEC5E5B": Object {
+      "Properties": Object {
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "NatGatewayId": "nat-99999999999999999",
+        "RouteTableId": Object {
+          "Ref": "privateSubnetapnortheast1cRouteTableE152E62E",
+        },
+      },
+      "Type": "AWS::EC2::Route",
+    },
+    "privateSubnetapnortheast1cRouteTableAssociation3829C8F8": Object {
+      "Properties": Object {
+        "RouteTableId": Object {
+          "Ref": "privateSubnetapnortheast1cRouteTableE152E62E",
+        },
+        "SubnetId": Object {
+          "Ref": "privateSubnetapnortheast1cSubnetE57E57C3",
+        },
+      },
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+    },
+    "privateSubnetapnortheast1cRouteTableE152E62E": Object {
+      "Properties": Object {
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "MyTestStack/privateSubnet-ap-northeast-1c",
+          },
+        ],
+        "VpcId": "vpc-99999999",
+      },
+      "Type": "AWS::EC2::RouteTable",
+    },
+    "privateSubnetapnortheast1cSubnetE57E57C3": Object {
+      "Properties": Object {
+        "AvailabilityZone": "ap-northeast-1c",
+        "CidrBlock": "172.31.52.0/24",
+        "MapPublicIpOnLaunch": true,
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "MyTestStack/privateSubnet-ap-northeast-1c",
+          },
+        ],
+        "VpcId": "vpc-99999999",
+      },
+      "Type": "AWS::EC2::Subnet",
+    },
+    "privateSubnetapnortheast1dDefaultRouteCBED6AF5": Object {
+      "Properties": Object {
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "NatGatewayId": "nat-99999999999999999",
+        "RouteTableId": Object {
+          "Ref": "privateSubnetapnortheast1dRouteTable31BA8D9E",
+        },
+      },
+      "Type": "AWS::EC2::Route",
+    },
+    "privateSubnetapnortheast1dRouteTable31BA8D9E": Object {
+      "Properties": Object {
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "MyTestStack/privateSubnet-ap-northeast-1d",
+          },
+        ],
+        "VpcId": "vpc-99999999",
+      },
+      "Type": "AWS::EC2::RouteTable",
+    },
+    "privateSubnetapnortheast1dRouteTableAssociation1B33F8A6": Object {
+      "Properties": Object {
+        "RouteTableId": Object {
+          "Ref": "privateSubnetapnortheast1dRouteTable31BA8D9E",
+        },
+        "SubnetId": Object {
+          "Ref": "privateSubnetapnortheast1dSubnet596F574C",
+        },
+      },
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+    },
+    "privateSubnetapnortheast1dSubnet596F574C": Object {
+      "Properties": Object {
+        "AvailabilityZone": "ap-northeast-1d",
+        "CidrBlock": "172.31.53.0/24",
+        "MapPublicIpOnLaunch": true,
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "MyTestStack/privateSubnet-ap-northeast-1d",
+          },
+        ],
+        "VpcId": "vpc-99999999",
+      },
+      "Type": "AWS::EC2::Subnet",
+    },
+  },
+}
+`;
+
+exports[`VpcStack 3`] = `
+Object {
+  "Resources": Object {
+    "publicSubnetapnortheast1aDefaultRoute13BEB917": Object {
+      "Properties": Object {
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": "igw-99999999",
+        "RouteTableId": Object {
+          "Ref": "publicSubnetapnortheast1aRouteTableAD7C168D",
+        },
+      },
+      "Type": "AWS::EC2::Route",
+    },
+    "publicSubnetapnortheast1aRouteTableAD7C168D": Object {
+      "Properties": Object {
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "MyTestStack/publicSubnet-ap-northeast-1a",
+          },
+        ],
+        "VpcId": "vpc-99999999",
+      },
+      "Type": "AWS::EC2::RouteTable",
+    },
+    "publicSubnetapnortheast1aRouteTableAssociationCD1D3738": Object {
+      "Properties": Object {
+        "RouteTableId": Object {
+          "Ref": "publicSubnetapnortheast1aRouteTableAD7C168D",
+        },
+        "SubnetId": Object {
+          "Ref": "publicSubnetapnortheast1aSubnet553AC7A4",
+        },
+      },
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+    },
+    "publicSubnetapnortheast1aSubnet553AC7A4": Object {
+      "Properties": Object {
+        "AvailabilityZone": "ap-northeast-1a",
+        "CidrBlock": "172.31.61.0/24",
+        "MapPublicIpOnLaunch": true,
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "MyTestStack/publicSubnet-ap-northeast-1a",
+          },
+        ],
+        "VpcId": "vpc-99999999",
+      },
+      "Type": "AWS::EC2::Subnet",
+    },
+    "publicSubnetapnortheast1cDefaultRoute14669087": Object {
+      "Properties": Object {
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": "igw-99999999",
+        "RouteTableId": Object {
+          "Ref": "publicSubnetapnortheast1cRouteTableAEF2BBEE",
+        },
+      },
+      "Type": "AWS::EC2::Route",
+    },
+    "publicSubnetapnortheast1cRouteTableAEF2BBEE": Object {
+      "Properties": Object {
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "MyTestStack/publicSubnet-ap-northeast-1c",
+          },
+        ],
+        "VpcId": "vpc-99999999",
+      },
+      "Type": "AWS::EC2::RouteTable",
+    },
+    "publicSubnetapnortheast1cRouteTableAssociation7B6B56B2": Object {
+      "Properties": Object {
+        "RouteTableId": Object {
+          "Ref": "publicSubnetapnortheast1cRouteTableAEF2BBEE",
+        },
+        "SubnetId": Object {
+          "Ref": "publicSubnetapnortheast1cSubnetED1EF36F",
+        },
+      },
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+    },
+    "publicSubnetapnortheast1cSubnetED1EF36F": Object {
+      "Properties": Object {
+        "AvailabilityZone": "ap-northeast-1c",
+        "CidrBlock": "172.31.62.0/24",
+        "MapPublicIpOnLaunch": true,
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "MyTestStack/publicSubnet-ap-northeast-1c",
+          },
+        ],
+        "VpcId": "vpc-99999999",
+      },
+      "Type": "AWS::EC2::Subnet",
+    },
+    "publicSubnetapnortheast1dDefaultRouteAE72E3F6": Object {
+      "Properties": Object {
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": "igw-99999999",
+        "RouteTableId": Object {
+          "Ref": "publicSubnetapnortheast1dRouteTable5A11ADE7",
+        },
+      },
+      "Type": "AWS::EC2::Route",
+    },
+    "publicSubnetapnortheast1dRouteTable5A11ADE7": Object {
+      "Properties": Object {
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "MyTestStack/publicSubnet-ap-northeast-1d",
+          },
+        ],
+        "VpcId": "vpc-99999999",
+      },
+      "Type": "AWS::EC2::RouteTable",
+    },
+    "publicSubnetapnortheast1dRouteTableAssociation70C40C25": Object {
+      "Properties": Object {
+        "RouteTableId": Object {
+          "Ref": "publicSubnetapnortheast1dRouteTable5A11ADE7",
+        },
+        "SubnetId": Object {
+          "Ref": "publicSubnetapnortheast1dSubnetD1C92021",
+        },
+      },
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+    },
+    "publicSubnetapnortheast1dSubnetD1C92021": Object {
+      "Properties": Object {
+        "AvailabilityZone": "ap-northeast-1d",
+        "CidrBlock": "172.31.63.0/24",
+        "MapPublicIpOnLaunch": true,
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "MyTestStack/publicSubnet-ap-northeast-1d",
+          },
+        ],
+        "VpcId": "vpc-99999999",
+      },
+      "Type": "AWS::EC2::Subnet",
+    },
+  },
+}
+`;

@@ -1,13 +1,24 @@
-import { expect as expectCDK, matchTemplate, MatchStyle } from '@aws-cdk/assert';
-import cdk = require('@aws-cdk/core');
-import Vpc = require('../lib/vpc-stack');
+import { expect as expectCDK, matchTemplate, MatchStyle, SynthUtils } from '@aws-cdk/assert';
+import { App } from '@aws-cdk/core';
+import { VpcStack, PrivateSubnetStack, PublicSubnetStack } from '../lib/vpc-stack';
 
-test('Empty Stack', () => {
-    const app = new cdk.App();
-    // WHEN
-    const stack = new Vpc.VpcStack(app, 'MyTestStack');
-    // THEN
-    expectCDK(stack).to(matchTemplate({
-      "Resources": {}
-    }, MatchStyle.EXACT))
+const vpcId = process.env.VPC_ID || '';
+
+test('VpcStack', () => {
+    const app = new App();
+    const stack = new VpcStack(app, 'MyTestStack');
+    expect(SynthUtils.toCloudFormation(stack)).toMatchSnapshot();
+});
+
+test('VpcStack', () => {
+  const app = new App();
+
+  const stack = new PrivateSubnetStack(app, 'MyTestStack', vpcId);
+  expect(SynthUtils.toCloudFormation(stack)).toMatchSnapshot();
+});
+
+test('VpcStack', () => {
+  const app = new App();
+  const stack = new PublicSubnetStack(app, 'MyTestStack', vpcId);
+  expect(SynthUtils.toCloudFormation(stack)).toMatchSnapshot();
 });
