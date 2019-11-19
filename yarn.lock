@@ -13,6 +13,51 @@
     jest "^24.9.0"
     source-map-support "^0.5.16"
 
+"@aws-cdk/aws-cloudwatch@1.16.3":
+  version "1.16.3"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-cloudwatch/-/aws-cloudwatch-1.16.3.tgz#d23c1610977b02728702b013daff0ceafe203203"
+  integrity sha512-9j4yfODa9YZwQ8huUvt8enrm+eY0Ss5h4qMG7dcuRZaWPHtCv6FpBtX+p5Fv8cPxjGXlITLDQ6Wdgnpi4BLPOg==
+  dependencies:
+    "@aws-cdk/aws-iam" "1.16.3"
+    "@aws-cdk/core" "1.16.3"
+
+"@aws-cdk/aws-ec2@^1.16.3":
+  version "1.16.3"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-ec2/-/aws-ec2-1.16.3.tgz#2a1e4ccdf94eff8955e2379962414dd53ec803aa"
+  integrity sha512-jvR5JQvl4jNvCFfqbfAoRsKSOatc1PKhs05TXkl+MZ87cHdd4FvEqw+wp4OaiA9dHPPhVKU0ER+jX0cwbKWYwQ==
+  dependencies:
+    "@aws-cdk/aws-cloudwatch" "1.16.3"
+    "@aws-cdk/aws-iam" "1.16.3"
+    "@aws-cdk/aws-ssm" "1.16.3"
+    "@aws-cdk/core" "1.16.3"
+    "@aws-cdk/cx-api" "1.16.3"
+
+"@aws-cdk/aws-iam@1.16.3":
+  version "1.16.3"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-iam/-/aws-iam-1.16.3.tgz#78d906eba4e10a7f2b1be4aeef40595f243aaafd"
+  integrity sha512-xf9SK9KSy+vv8vU2dvZtTZhVpW5ongKmB7sXoSRJi+GdSkALxKeJowDkf/QIv8ZFottNv2gvhfH2jajUuShpDw==
+  dependencies:
+    "@aws-cdk/core" "1.16.3"
+    "@aws-cdk/region-info" "1.16.3"
+
+"@aws-cdk/aws-kms@1.16.3":
+  version "1.16.3"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-kms/-/aws-kms-1.16.3.tgz#a86b8f1f64be6c27a3fd264fbba5c7ae04aeb7c1"
+  integrity sha512-GgEmftCImnXq+TZ9QDjXXh2fC93CkWZe/aXNIoQ49wWThs68hjhhIH8drgH3Jkuo87pMjuZrt827OCdZJtTZ4Q==
+  dependencies:
+    "@aws-cdk/aws-iam" "1.16.3"
+    "@aws-cdk/core" "1.16.3"
+
+"@aws-cdk/aws-ssm@1.16.3":
+  version "1.16.3"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-ssm/-/aws-ssm-1.16.3.tgz#ee06bd97ef0e0de59accef3c7e02adebdc42aad5"
+  integrity sha512-IKqUQrl5WwtDrLqw3Pz2JNOgFDfQLXuHK92d4q5xPqjIKIMes79/PTkJSd2YWtSVGGWW/q14kOuu73AiRsljEA==
+  dependencies:
+    "@aws-cdk/aws-iam" "1.16.3"
+    "@aws-cdk/aws-kms" "1.16.3"
+    "@aws-cdk/core" "1.16.3"
+    "@aws-cdk/cx-api" "1.16.3"
+
 "@aws-cdk/cfnspec@1.16.3":
   version "1.16.3"
   resolved "https://registry.yarnpkg.com/@aws-cdk/cfnspec/-/cfnspec-1.16.3.tgz#043b322cf86e77532c7d950e0d4bbba00a0180db"
